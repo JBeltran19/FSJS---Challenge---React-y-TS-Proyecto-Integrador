@@ -1,14 +1,13 @@
 import React from 'react'
-import Home from '../Componentes/mainpage/Home'
 import Shop from '../Componentes/Products/Shop'
 
 
-const Productos = ({productItems}) => {
+const Productos = ({productItems,addToCart}) => {
     
   return (
     <>
         
-        <Shop productItems={productItems}/>
+        <Shop productItems={productItems} addToCart={addToCart}/>
     </>
   )
 }

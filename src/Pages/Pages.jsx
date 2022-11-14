@@ -2,14 +2,16 @@ import React from 'react'
 import Home from '../Componentes/mainpage/Home'
 import Shop from '../Componentes/Products/Shop'
 import ProductTop from '../Componentes/ProductTop/ProductTop'
+import Contact from '../HeaderContent/forms/Contact'
 
-const Pages = ({productItems}) => {
+const Pages = ({productItems,addToCart}) => {
     
   return (
     <>
-        <Home/>
+        <Home />
         <ProductTop/>
-        <Shop productItems={productItems}/>
+        <Shop productItems={productItems} addToCart={addToCart}/>
+        <Contact/>
     </>
   )
 }

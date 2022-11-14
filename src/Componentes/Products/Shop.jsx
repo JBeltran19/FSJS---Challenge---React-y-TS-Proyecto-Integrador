@@ -2,7 +2,7 @@ import React from 'react'
 import Productos from './Productos'
 import './Style.css'
 
-const Shop = (productItems) => {
+const Shop = ({productItems,addToCart}) => {
     
   return (
     <>
@@ -14,7 +14,7 @@ const Shop = (productItems) => {
               <h2>Notebooks</h2>
           </div>
           <div className='product-content  grid1'>
-            <Productos productItems={productItems}/>
+            <Productos productItems={productItems}     addToCart={addToCart}/>
           </div>
         </div>
       </div>

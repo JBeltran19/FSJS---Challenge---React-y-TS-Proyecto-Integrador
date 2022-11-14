@@ -1,16 +1,15 @@
 import React,{useState} from 'react'
 
-const Productos = ({productItems}) => {
+const Productos = ({productItems,addToCart}) => {
     
     const [count, setCount] = useState(0)
   const increment = () => {
     setCount(count + 1)
   }
-  const prod= productItems.productItems;
 
   return (
     <>
-      {prod.map((productItems) => {
+      {productItems.map((productItems) => {
         return (
           <div className='box'>
             <div className='product mtop'>
@@ -33,7 +32,9 @@ const Productos = ({productItems}) => {
                 </div>
                 <div className='price'>
                   <h4>${productItems.price}.00 </h4>
-                  
+                  <button onClick={() => addToCart(productItems)}>
+                    <i className='fa fa-plus'></i>
+                  </button>
                 </div>
               </div>
             </div>
