@@ -12,7 +12,7 @@
     width: 30%;
     margin-top: 30px;
     margin-left: 30px;
-    height: 130px;
+    
   }
   .cart-list {
     background: white;
@@ -37,6 +37,12 @@
     font-weight: 400;
     margin-top: 50px;
     color: grey;
+  }
+  .cart-items h2 {
+    font-size: 25px;
+    font-weight: 400;
+    color: rgb(0, 0, 0);
+    margin-top: 10%;
   }
   .cart-items h4 span {
     color: #e94560;
@@ -68,8 +74,8 @@
     background: #f6f9fc;
   }
   .cart-total h4 {
-    font-size: 15px;
-    font-weight: 400;
+    font-size: 20px;
+    font-weight: 500;
   }
   .cart-total h3 {
     font-size: 20px;

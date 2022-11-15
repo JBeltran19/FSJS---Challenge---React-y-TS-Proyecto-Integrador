@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React from "react"
 import Slider from "react-slick"
 import Ddata from "./Ddata"
 import "slick-carousel/slick/slick.css"
@@ -26,10 +26,7 @@ const SamplePrevArrow = (props) => {
 }
 
 const ProductCard = () => {
-    const [count, setCount] = useState(0)
-    const increment = () => {
-    setCount(count + 1)
-  }
+  
   const settings = {
     dots: false,
     infinite: true,
@@ -46,7 +43,7 @@ const ProductCard = () => {
     <>
       <Slider {...settings}>
       
-        {Ddata.map((value, index) => {
+        {Ddata.map((value,index) => {
           return (
             <>
               <div className='box product' key={index}>

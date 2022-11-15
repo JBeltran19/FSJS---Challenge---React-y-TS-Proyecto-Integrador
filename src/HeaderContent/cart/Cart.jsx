@@ -10,7 +10,7 @@ const Cart = ({ CartItem, addToCart, decreaseQty}) => {
           
 
           <div className='cart-details'>
-            {CartItem.length === 0 && <h1 className='no-items product'>No Items are add in Cart</h1>}
+            {CartItem.length === 0 && <h1 className='no-items product'>No hay productos cargados</h1>}
 
           
             {CartItem.map((item) => {
@@ -24,8 +24,8 @@ const Cart = ({ CartItem, addToCart, decreaseQty}) => {
                   <div className='cart-details'>
                     <h3>{item.name}</h3>
                     <h4>
-                      ${item.price}.00 * {item.qty}
-                      <span>${productQty}.00</span>
+                      ${item.price} * {item.qty}
+                      <span>${productQty}</span>
                     </h4>
                   </div>
                   <div className='cart-items-function'>
@@ -39,6 +39,9 @@ const Cart = ({ CartItem, addToCart, decreaseQty}) => {
                       <button className='incCart' onClick={() => addToCart(item)}>
                         <i className='fa-solid fa-plus'></i>
                       </button>
+                      <h2>
+                      <span>{item.qty}</span>
+                    </h2>
                       <button className='desCart' onClick={() => decreaseQty(item)}>
                         <i className='fa-solid fa-minus'></i>
                       </button>
@@ -52,10 +55,10 @@ const Cart = ({ CartItem, addToCart, decreaseQty}) => {
           </div>
 
           <div className='cart-total product'>
-            <h2>Cart Summary</h2>
+            <h2>Carrito</h2>
             <div className=' d_flex'>
-              <h4>Total Price :</h4>
-              <h3>${totalPrice}.00</h3>
+              <h4> Total : </h4>
+              <h3>${totalPrice}</h3>
             </div>
           </div>
         </div>

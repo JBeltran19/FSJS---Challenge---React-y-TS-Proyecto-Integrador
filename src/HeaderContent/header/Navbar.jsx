@@ -16,6 +16,7 @@ import { CSSTransition } from 'react-transition-group';
 
 
 
+
 const Navbar = () => {
   return (
     
@@ -50,10 +51,10 @@ function NavItem(props) {
   const [open, setOpen] = useState(false);
 
   return (
-    <li className="nav-item">
-      <a href="#" className="" onClick={() => setOpen(!open)}>
+    <li className="nav-item" onMouseOver={() => setOpen(true)} onMouseOut={() => setOpen(false)}>
+      
         {props.name}
-      </a>
+      
 
       {open && props.children}
     </li>
@@ -76,11 +77,11 @@ function DropdownMenu() {
 
   function DropdownItem(props) {
     return (
-      <a href="#" className="menu-item" onClick={() => props.goToMenu && setActiveMenu(props.goToMenu)}>
+      <div className="menu-item" onClick={() => props.goToMenu && setActiveMenu(props.goToMenu)}>
         <span className="icon-button">{props.leftIcon}</span>
         {props.children}
         <span className="icon-right">{props.rightIcon}</span>
-      </a>
+      </div>
     );
   }
 
@@ -163,8 +164,8 @@ function DropdownMenu() {
           <DropdownItem goToMenu="main" leftIcon={<ArrowIcon />}>
             <h2>Volver</h2>
           </DropdownItem>
-          <DropdownItem leftIcon={<BoltIcon />}>AMD</DropdownItem>
-          <DropdownItem leftIcon={<BoltIcon />}>Intel</DropdownItem>
+          <DropdownItem leftIcon={<BoltIcon />}>{<Link to='/productos/cpu/amd'>Amd</Link>}</DropdownItem>
+          <DropdownItem leftIcon={<BoltIcon />}><Link to='/productos/cpu/intel'>Intel</Link></DropdownItem>
         </div>
       </CSSTransition>
 
@@ -178,8 +179,8 @@ function DropdownMenu() {
           <DropdownItem goToMenu="main" leftIcon={<ArrowIcon />}>
             <h2>Motherboards</h2>
           </DropdownItem>
-          <DropdownItem leftIcon={<BoltIcon />}>Amd4</DropdownItem>
-          <DropdownItem leftIcon={<BoltIcon />}>Intel 1151</DropdownItem>
+          <DropdownItem leftIcon={<BoltIcon />}><Link to='/productos/mother/amd4'>amd4</Link></DropdownItem>
+          <DropdownItem leftIcon={<BoltIcon />}><Link to='/productos/mother/intel-1151'>Intel 1151</Link></DropdownItem>
         </div>
       </CSSTransition>
     </div>

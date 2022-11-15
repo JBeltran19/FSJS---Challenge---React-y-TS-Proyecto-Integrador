@@ -4,13 +4,13 @@ import './style.css'
 const Contact = () => {
   return (
     <>
-    <div class="content">
+    <div className="content">
 
-<h1 class="logo">Contact <span>Us</span></h1>
+<h1 className="logo"><span>Newsletter</span></h1>
 
-<div class="contact-wrapper animated bounceInUp">
-    <div class="contact-form">
-        <h3>Contact us</h3>
+<div className="contact-wrapper animated bounceInUp">
+    <div className="contact-form">
+        <h3>Contactanos</h3>
         <form action="">
             <p>
                 <label>FullName</label>
@@ -28,23 +28,23 @@ const Contact = () => {
                 <label>Affair</label>
                 <input type="text" name="affair"/>
             </p>
-            <p class="block">
+            <p className="block">
                <label>Message</label> 
                 <textarea name="message" rows="3"></textarea>
             </p>
-            <p class="block">
+            <p className="block">
                 <button>
                     Send
                 </button>
             </p>
         </form>
     </div>
-    <div class="contact-info">
+    <div className="contact-info">
         <h4>More Info</h4>
         <ul>
-            <li><i class="fas fa-map-marker-alt"></i> Baker Street</li>
-            <li><i class="fas fa-phone"></i> (111) 111 111 111</li>
-            <li><i class="fas fa-envelope-open-text"></i> contact@website.com</li>
+            <li><i className="fas fa-map-marker-alt"></i> Baker Street</li>
+            <li><i className="fas fa-phone"></i> (111) 111 111 111</li>
+            <li><i className="fas fa-envelope-open-text"></i> contact@website.com</li>
         </ul>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero provident ipsam necessitatibus repellendus?</p>
         <p>Company.com</p>

@@ -68,6 +68,9 @@
   .search .f_flex {
     justify-content: end;
   }
+  .filter{
+    display: none;
+  }
   /*------search-----------*/
   .catgrories {
     background-color: #f6f9fc;
@@ -103,7 +106,11 @@
   .navbar ul li a:hover {
     color: #ff014f;
   }
-  
+  .menu-item{
+    transition: 0.5s;
+    font-size: 22px;
+    font-weight: 400;
+  }
   .open {
     display: none;
   }

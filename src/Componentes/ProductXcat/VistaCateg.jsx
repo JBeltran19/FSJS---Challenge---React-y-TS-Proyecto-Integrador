@@ -1,9 +1,10 @@
 import React from 'react'
-import Productos from './Productos'
-import './Style.css'
+import { useParams } from 'react-router-dom'
+import ProductCategories from './ProductCategories'
+import '../Products/Style.css'
 
-const Shop = ({productItems,addToCart}) => {
-    
+const VistaCateg = ({productItems,addToCart}) => {
+  const {cat} = useParams();
   return (
     <>
     <section className='shop background'>
@@ -11,10 +12,10 @@ const Shop = ({productItems,addToCart}) => {
 
         <div className='contentWidth'>
           <div className='heading'>
-              <h2>Notebooks</h2>
+              <h2>{cat}</h2>
           </div>
           <div className='product-content  grid1'>
-            <Productos productItems={productItems} addToCart={addToCart}/>
+            <ProductCategories productItems={productItems} addToCart={addToCart}/>
           </div>
         </div>
       </div>
@@ -23,4 +24,4 @@ const Shop = ({productItems,addToCart}) => {
   )
 }
 
-export default Shop
+export default VistaCateg

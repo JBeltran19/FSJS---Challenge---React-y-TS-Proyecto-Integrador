@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from "react-router-dom"
 import logo from '../../HeaderContent/logo.jpg'
-const Search = ({ CartItem }) => {
+const Search = ({CartItem}) => {
   return (
     <>
     <section className='search'>
@@ -12,8 +12,8 @@ const Search = ({ CartItem }) => {
         <div className='search-box f_flex'>
        
           <i className='fa fa-search'></i>
-          <input type='text' placeholder='Search and hit enter...' />
-          <span>All Category</span>
+          <input type='search' placeholder='Buscar...' className='card-filter' />
+          
         </div>
 
         <div className='icon f_flex width'>
