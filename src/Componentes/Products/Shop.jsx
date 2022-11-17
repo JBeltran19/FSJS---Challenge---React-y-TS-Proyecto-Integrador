@@ -11,7 +11,7 @@ const Shop = ({productItems,addToCart}) => {
 
         <div className='contentWidth'>
           <div className='heading'>
-              <h2>Notebooks</h2>
+              <h2>Productos</h2>
           </div>
           <div className='product-content  grid1'>
             <Productos productItems={productItems} addToCart={addToCart}/>

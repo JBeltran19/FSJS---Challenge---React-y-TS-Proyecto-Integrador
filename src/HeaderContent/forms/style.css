@@ -92,14 +92,22 @@ ul {
 }
 
 /* LARGE SIZE */
-@media(min-width: 700px) {
-    
+@media(max-width: 768px) {
+    .content{
+        padding-left: 10px;
+        padding-right: 10px;
+        margin-bottom: 10px;
+    }
     .contact-wrapper {
         display: grid;
-        grid-template-columns: 2fr 1fr;
+        grid-template-columns: 1fr 1fr;
+        display: block;
     }
     .contact-wrapper > * {
-        padding: 2em;
+        padding: 1em;
+    }
+    .contact-form h3{
+        text-align: center;
     }
     .contact-info h4,
     .contact-info ul,

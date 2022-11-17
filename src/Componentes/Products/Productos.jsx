@@ -11,7 +11,7 @@ const Productos = ({productItems,addToCart}) => {
     <>
       {productItems.map((productItems) => {
         return (
-          <div className='box'>
+          <div className='box' key={productItems.id}>
             <div className='product mtop'>
               <div className='img'>
                 <span className='discount'>{productItems.discount}% Off</span>

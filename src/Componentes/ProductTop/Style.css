@@ -25,3 +25,29 @@
   transform: translateY(-10px);
   box-shadow: rgba(35, 39, 47, 0.1) 0px 4px 16px;
 }
+@media (max-width: 768px){
+  .contentWidth{
+    padding: 12px !important;
+  }
+  .background{
+    padding: 0;
+    align-items: center;
+  }
+  .product{
+    margin: 3px;
+    padding: 3px;
+  }
+  .NewArrivals h4 {
+    font-size: 11px;
+  }
+  .NewArrivals span {
+    font-size: 11px;
+  }
+  .control-btn .next,
+.control-btn .prev {
+  width: 35px;
+  height: 35px;
+  line-height: 47px;
+  
+}
+}

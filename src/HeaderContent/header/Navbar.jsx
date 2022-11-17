@@ -18,22 +18,26 @@ import { CSSTransition } from 'react-transition-group';
 
 
 const Navbar = () => {
+  
+  const [MobileMenu, setMobileMenu] = useState(false)
   return (
     
       <header className='header'>
         <div className='container d_flex'>
           
-          <NavbarContent>
+          <NavbarContent MobileMenu={MobileMenu} setMobileMenu={setMobileMenu}>
             <NavItem name={<Link to='/'>Home</Link>} />
             <NavItem name={<Link to='/productos'>Productos</Link>}>
               <DropdownMenu></DropdownMenu>
             </NavItem>
-            <NavItem name={<Link to='/notebooks'>Notebooks</Link>} />
+            <NavItem name={<Link to='/notebooks/net/net'>Notebooks</Link>} />
             <NavItem name={<Link to='/perifericos'>Perifericos</Link>} />
             <NavItem name={<Link to='/faq'>FAQ</Link>} />
             
             <NavItem name={<Link to='/contacto'>Contacto</Link>} />
+            
           </NavbarContent>
+          
         </div>
       </header>
     
@@ -41,9 +45,13 @@ const Navbar = () => {
 }
 
 function NavbarContent(props) {
+  
   return (
     <nav className="navbar">
-      <ul className="navbar-nav">{props.children}</ul>
+      <ul className={props.MobileMenu ? "nav-links-MobileMenu" : "link f_flex capitalize"} onClick={() => props.setMobileMenu(false)}>{props.children}</ul>
+      <button className='toggle' onClick={() => props.setMobileMenu(!props.MobileMenu)}>
+              {props.MobileMenu ? <i className='fas fa-times close home-btn'></i> : <i className='fas fa-bars open'></i>}
+            </button>
     </nav>
   );
 }
@@ -136,19 +144,19 @@ function DropdownMenu() {
             leftIcon={<Power/>}
             rightIcon={<ChevronIcon />}
             goToMenu="power">
-            Fuentes
+            <Link to='/productos/power/power'>Fuentes</Link>
           </DropdownItem>
           <DropdownItem
             leftIcon={<Cabinet/>}
             rightIcon={<ChevronIcon />}
             goToMenu="cabinet">
-            Gabinetes
+            <Link to='/productos/gabinete/gabinete'>Gabinetes</Link>
           </DropdownItem>
           <DropdownItem
             leftIcon={<Monitor/>}
             rightIcon={<ChevronIcon />}
             goToMenu="monitor">
-            Monitores
+            <Link to='/productos/monitor/monitor'>Monitores</Link>
           </DropdownItem>
 
         </div>
@@ -183,6 +191,54 @@ function DropdownMenu() {
           <DropdownItem leftIcon={<BoltIcon />}><Link to='/productos/mother/intel-1151'>Intel 1151</Link></DropdownItem>
         </div>
       </CSSTransition>
+
+      <CSSTransition
+        in={activeMenu === 'ram'}
+        timeout={500}
+        classNames="menu-secondary"
+        unmountOnExit
+        onEnter={calcHeight}>
+        <div className="menu">
+          <DropdownItem goToMenu="main" leftIcon={<ArrowIcon />}>
+            <h2>Ram</h2>
+          </DropdownItem>
+          <DropdownItem leftIcon={<BoltIcon />}><Link to='/productos/ram/dr2'>DRR2</Link></DropdownItem>
+          <DropdownItem leftIcon={<BoltIcon />}><Link to='/productos/ram/dr3'>DRR3</Link></DropdownItem>
+          <DropdownItem leftIcon={<BoltIcon />}><Link to='/productos/ram/dr4'>DRR4</Link></DropdownItem>
+          <DropdownItem leftIcon={<BoltIcon />}><Link to='/productos/ram/dr5'>DRR5</Link></DropdownItem>
+        </div>
+      </CSSTransition>
+
+      <CSSTransition
+        in={activeMenu === 'videocard'}
+        timeout={500}
+        classNames="menu-secondary"
+        unmountOnExit
+        onEnter={calcHeight}>
+        <div className="menu">
+          <DropdownItem goToMenu="main" leftIcon={<ArrowIcon />}>
+            <h2>Placa Video</h2>
+          </DropdownItem>
+          <DropdownItem leftIcon={<BoltIcon />}><Link to='/productos/video/rx'>RX</Link></DropdownItem>
+          <DropdownItem leftIcon={<BoltIcon />}><Link to='/productos/video/gt'>GT</Link></DropdownItem>
+        </div>
+      </CSSTransition>
+
+      <CSSTransition
+        in={activeMenu === 'hardisk'}
+        timeout={500}
+        classNames="menu-secondary"
+        unmountOnExit
+        onEnter={calcHeight}>
+        <div className="menu">
+          <DropdownItem goToMenu="main" leftIcon={<ArrowIcon />}>
+            <h2>Placa Video</h2>
+          </DropdownItem>
+          <DropdownItem leftIcon={<BoltIcon />}><Link to='/productos/disk/hhd'>HHD</Link></DropdownItem>
+          <DropdownItem leftIcon={<BoltIcon />}><Link to='/productos/disk/ssd'>SSD</Link></DropdownItem>
+        </div>
+      </CSSTransition>
+      
     </div>
   );
 }

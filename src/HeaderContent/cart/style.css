@@ -1,11 +1,38 @@
+.containerZ{
+  display: block;
+  width: 100%;
+}
+.container-cart{
+  display: flex;
+}
+
 .cart-items {
     background: #f6f9fc;
     height: auto;
-    padding: 50px 0;
+    padding: 25px 0;
   }
   
   .cart-items .cart-details {
     width: 70%;
+  }
+  .buttonShop{
+    width: 100%;
+    padding: 10px;
+    justify-content: center;
+  }
+  .buttonShop p{
+    width: 100%;
+  }
+  .buttonShop button{
+    width: 100%;
+  outline: 0;
+  color: #fff;
+  border-bottom: 1px solid #d63031;
+  background: #B70E21;
+  border: 0;
+  text-transform: uppercase;
+  padding: 1em;
+  
   }
   
   .cart-items .cart-total {
@@ -94,4 +121,80 @@
     font-size: 18px;
     margin-top: 30px;
     height: 130px;
+  }
+  .titleCart{
+    font-size: 30px;
+      padding: 0 10px;
+      margin-top: 0;
+      text-align: center;
+  }
+  @media (max-width: 768px){
+    .container-cart{
+      display: block;
+    }
+    .titleCart{
+      font-size: 30px;
+      padding: 0 10px;
+      margin-top: 0;
+      text-align: center;
+    }
+    .d_flex{
+      display: block;
+    }
+    .cart-list{
+      display: flex;
+    }
+    .cart-items .cart-details{
+      width: 100%;
+      padding: 10px;
+      align-items: center;
+      text-align: center;
+    }
+    .cart-items .cart-details h4{
+      margin-top: 10px;
+    }
+    .cart-items{
+      width: 100%;
+      padding: 0;
+      
+    }
+    .cart-items .img{
+      width: 100%;
+    }
+    .cartControl{
+      display: flex;
+      margin-top: 5px;
+    }
+    .cartControl h2{
+      margin-top: 10px;
+    }
+    .cart-items .cart-total{
+      width: 100%;
+      margin: 0;
+      padding: 10px;
+      text-align: center;
+    }
+    .mobile{
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+      padding: 10px;
+    }
+    .buttonShop{
+      width: 100%;
+      padding: 10px;
+    }
+    .buttonShop p{
+      width: 100%;
+    }
+    .buttonShop button{
+      width: 100%;
+    outline: 0;
+    color: #fff;
+    border-bottom: 1px solid #d63031;
+    background: #B70E21;
+    border: 0;
+    text-transform: uppercase;
+    padding: 1em;
+    }
   }

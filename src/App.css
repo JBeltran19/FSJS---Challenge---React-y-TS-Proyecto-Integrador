@@ -78,9 +78,7 @@ li {
 .uppercase {
   text-transform: uppercase;
 }
-.capitalize {
-  text-transform: capitalize;
-}
+
 .RText {
   text-align-last: right;
 }
@@ -108,7 +106,10 @@ button {
 
 /*---------category----------*/
 .contentWidth {
-  width: 100%;;
+  width: 100%;
+}
+.homeSlide{
+  width: 100%;
 }
 
 .category {

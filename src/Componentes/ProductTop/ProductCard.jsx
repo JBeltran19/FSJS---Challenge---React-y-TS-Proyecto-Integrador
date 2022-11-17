@@ -38,7 +38,7 @@ const ProductCard = () => {
     nextArrow: <SampleNextArrow />,
     prevArrow: <SamplePrevArrow />,
   }
- 
+
   return (
     <>
       <Slider {...settings}>

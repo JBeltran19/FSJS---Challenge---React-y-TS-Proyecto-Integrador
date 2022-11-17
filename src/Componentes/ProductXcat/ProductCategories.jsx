@@ -2,6 +2,7 @@ import React,{useState} from 'react'
 import { useParams } from 'react-router-dom'
 import productItems from './Data';
 
+
 const ProductCategories = ({addToCart}) => {
     
     const [count, setCount] = useState(0)
@@ -18,6 +19,7 @@ const p = productItems.productItems;
   return (
 
     <>
+
       {productCat.map((productItems) => {
         return (
           <div className='box' key={productItems.id}>

@@ -8,7 +8,6 @@ import Productos from './Pages/Productos';
 import Cart from './HeaderContent/cart/Cart';
 import ProductoXcategories from './Pages/ProductoXcategories.jsx'
 import searchFilter from "./HeaderContent/header/filtroBusquedas";
-
 function App() {
   const {productItems} = Data;
   const [CartItem, setCartItem] = useState([]);
@@ -37,13 +36,15 @@ function App() {
       <Router>
         <Header CartItem={CartItem}/>
         <Routes>
-          <Route exact path='/' element={<Pages productItems={productItems} addToCart={addToCart} />}/>
+          
 
           <Route path='/productos' element={<Productos productItems={productItems} addToCart={addToCart} />} />
 
           <Route path='/:navText/:cat/:subCat' element={<ProductoXcategories addToCart={addToCart} />} />
 
           <Route path='/cart' element={<Cart CartItem={CartItem} addToCart={addToCart} decreaseQty={decreaseQty} />}/>
+
+          <Route exact path='/' element={<Pages productItems={productItems} addToCart={addToCart} />}/>
 
         </Routes>
         
